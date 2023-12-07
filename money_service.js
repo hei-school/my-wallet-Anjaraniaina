@@ -1,8 +1,9 @@
 const { getPromptAsFloat, getPromptAsNumber } = require('./utils');
 
 let balance = 0;
-let latestActions = [];
+let latest_actions = [];
 let currency = "Ariary";
+const cannot_do = "You can't do that";
 
 function print(message) {
     console.log(message);
@@ -10,7 +11,7 @@ function print(message) {
 
 function checkBalance() {
     print(`Your current balance is: ${balance} ${currency}`);
-    latestActions.push(`You checked your balance. That was ${balance} ${currency}`);
+    latest_actions.push(`You checked your balance. That was ${balance} ${currency}`);
 }
 
 function retrieveMoney() {
@@ -20,9 +21,9 @@ function retrieveMoney() {
         balance = (balance - wantedMoney);
         const message = `You took ${wantedMoney} ${currency} out.`;
         print(message);
-        latestActions.push(message);
+        latest_actions.push(message);
     } else {
-        print("You can't do that.");
+        print(cannot_do);
         print(`Your current balance is: ${balance} ${currency}`);
     }
 }
@@ -34,9 +35,9 @@ function storeMoney() {
         balance = (balance + moneyToAdd);
         const message = `You added ${moneyToAdd} ${currency} to your balance.`;
         print(message);
-        latestActions.push(message);
+        latest_actions.push(message);
     } else {
-        print("You can't do that.");
+        print(cannot_do);
     }
 }
 
@@ -68,7 +69,7 @@ function convertToChosenCurrency(currentCurrency, chosenCurrency) {
         currency = (chosenCurrency);
         const message = `You choose ${chosenCurrency} as currency.`;
         print(message);
-        latestActions.push(message);
+        latest_actions.push(message);
         if (balance > 0) {
             switch (currentCurrency) {
                 case "Ariary":
@@ -90,7 +91,7 @@ function convertToChosenCurrency(currentCurrency, chosenCurrency) {
 
 function history() {
     print("Your latest actions from recent to older:");
-    latestActions.slice(-5).reverse().forEach(print);
+    latest_actions.slice(-5).reverse().forEach(print);
 }
 
 
