@@ -13,7 +13,7 @@ You can:
 ## Installation & use
 This program was implemented in 4 languages. Follow the links to see the different language and how 
 to install and use the project:
-* [Java]()
-* [Javascript]()
-* [Python]()
-* [Scala]()
+* [Java](https://github.com/hei-school/cc-d1-my-wallet-Anjaraniaina/tree/feature/java)
+* [Javascript](https://github.com/hei-school/cc-d1-my-wallet-Anjaraniaina/tree/feature/javascript-vanilla)
+* [Python](https://github.com/hei-school/cc-d1-my-wallet-Anjaraniaina/tree/feature/python)
+* [Scala](https://github.com/hei-school/cc-d1-my-wallet-Anjaraniaina/tree/feature/scala)
