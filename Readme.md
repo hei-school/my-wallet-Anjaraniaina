@@ -11,7 +11,7 @@ You can:
 * choose your currency
 
 ## Installation & use
-This program was implemented in 4 languages. Follow the links to see the different language and how 
+This program was implemented in 4 languages. Follow the links to see the different languages and how 
 to install and use the project:
 * [Java](https://github.com/hei-school/cc-d1-my-wallet-Anjaraniaina/tree/feature/java)
 * [Javascript](https://github.com/hei-school/cc-d1-my-wallet-Anjaraniaina/tree/feature/javascript-vanilla)
