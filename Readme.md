@@ -14,11 +14,11 @@ The service for unchecked item are not implemented yet.
 ## Installation
 If you already have a java environment set-up, skip to the **How To use**.
 ### Requirements
-* [JDK 18](): follow the link to get more details 
+* [JDK 21](https://www.oracle.com/java/technologies/downloads/#java21): follow the link to download and install the JDK for your operating system.
 
 
 ## How to use ?
-If you don't have an IDE but have a java setup, from the root directory just run these commands: \
+If you don't have an IDE but have a java setup, from the root directory just run these commands:
 ```
 javac -d . ./src/*.java
 java Main
