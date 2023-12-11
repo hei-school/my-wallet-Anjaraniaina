@@ -1,7 +1,12 @@
+package com.wallet.service;
+
 import java.util.Collections;
 import java.util.List;
 
-public class MoneyService implements Compartment{
+import com.wallet.Utils;
+import com.wallet.abstraction.Compartment;
+
+public class MoneyService implements Compartment {
     private double balance;
     private List<String> latestActions;
 

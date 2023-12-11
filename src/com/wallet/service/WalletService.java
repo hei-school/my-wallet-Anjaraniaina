@@ -1,6 +1,13 @@
+package com.wallet.service;
+
+
+import com.wallet.Main;
+import com.wallet.Utils;
+import com.wallet.abstraction.Compartment;
+
 import java.util.ArrayList;
 
-public class WalletService implements Compartment{
+public class WalletService implements Compartment {
     public WalletService() {
     }
 
@@ -26,6 +33,8 @@ public class WalletService implements Compartment{
                 .append("5. Visit card")
                 .append("\n")
                 .append("6. ID photo")
+                .append("\n")
+                .append("7. Close your wallet")
                 .toString());
         switch (Utils.intScanner()) {
             case 1, 3, 4, 5, 6 -> {
@@ -33,6 +42,7 @@ public class WalletService implements Compartment{
                 menu();
             }
             case 2 -> moneyService.menu();
+            case 7 -> Utils.quit();
             default -> menu();
         }
     }

@@ -10,6 +10,7 @@ The service for unchecked item are not implemented yet.
 4. [ ] Driving License
 5. [ ] Visit card
 6. [ ] ID Photo
+7. [x] Wallet
 
 ## Installation
 If you already have a java environment set-up, skip to the **How To use**.
@@ -20,6 +21,6 @@ If you already have a java environment set-up, skip to the **How To use**.
 ## How to use ?
 If you don't have an IDE but have a java setup, from the root directory just run these commands:
 ```
-javac -d . ./src/*.java
-java Main
+javac -d . ./src/com/wallet/*.java ./src/com/wallet/abstraction/*.java ./src/com/wallet/exception/*.java ./src/com/wallet/service/*.java
+java com.wallet.Main
 ```

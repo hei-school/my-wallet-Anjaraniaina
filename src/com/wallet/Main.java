@@ -1,3 +1,7 @@
+package com.wallet;
+
+import com.wallet.service.WalletService;
+
 public class Main {
     static final WalletService walletService = new WalletService();
     public static void main(String[] args) {
@@ -9,6 +13,7 @@ public class Main {
     }
 
     public static void menu() {
+        Utils.print("Type a number between the given choice.");
         Utils.print(new StringBuilder()
                 .append("1. Open your wallet")
                 .append("\n")
@@ -16,12 +21,9 @@ public class Main {
                 .append("\n")
                 .toString());
         switch (Utils.intScanner()) {
-            case 1, default -> walletService.menu();
-            case 2 -> quit();
+            case 1 -> walletService.menu();
+            case 2 -> Utils.quit();
+            default -> menu();
         }
     }
-
-    public static void quit() {
-        Utils.print("See you later !");
-    };
 }
